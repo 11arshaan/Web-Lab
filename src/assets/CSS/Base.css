@@ -1,0 +1,34 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+html {
+    --bg-1: white;
+    --bg-slate: #040404;
+    --bg-highlight: #0C0C0C;
+    --stroke-dark: #0A0A0A;
+    --stroke-light: #8D8D8D;
+    --content-main: black;
+    --content-secondary: #282828;
+}
+
+html.dark {
+    --bg-1: black;
+    --bg-slate: #040404;
+    --bg-highlight: #0C0C0C;
+    --stroke-dark: #0A0A0A;
+    --stroke-light: #404040;
+    --content-main: white;
+    --conent-secondary: #C7C7C7;
+}
+
+
+body {
+    background: var(--bg-1);
+    color: var(--content-main);
+    
+}

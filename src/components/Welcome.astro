@@ -1,10 +1,12 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import astroLogo from '../assets/Graphics/Logo/astro.svg';
+import background from '../assets//Graphics/Backgrounds/background.svg';
 ---
+
 
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	
 	<main>
 		<section id="hero">
 			<a href="https://astro.build"
@@ -41,6 +43,7 @@ import background from '../assets/background.svg';
 	</a>
 </div>
 
+
 <style>
 	#background {
 		position: fixed;
@@ -55,6 +58,7 @@ import background from '../assets/background.svg';
 	#container {
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 		height: 100%;
+		
 	}
 
 	main {
