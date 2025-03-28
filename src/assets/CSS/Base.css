@@ -32,3 +32,10 @@ body {
     color: var(--content-main);
     
 }
+
+@font-face {
+    font-family: 'Exo2';
+    src: url('/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+  }
