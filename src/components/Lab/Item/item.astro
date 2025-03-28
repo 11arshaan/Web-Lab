@@ -1,5 +1,69 @@
 ---
-// insert component data, including component itself
+// Item.astro
+import { Image } from "astro:assets";
+const { image, title, slug, description, tags } = Astro.props;
 ---
 
+<div class="card">
+    <a href={`/lab/${slug}`} data-view-transition={slug} class="image-link">
+        <Image src={image} alt={title} class="image" />
+        <div class="description-container"><p>{description}</p></div>
+    </a>
+    <h2>{title}</h2>
+</div>
 
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        /* background: white; */
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid yellowgreen;
+    }
+
+    .image-link {
+        position: relative;
+        width: 100%;
+        height: 90%;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        object-fit: cover;
+    }
+
+    /* Hover overlay */
+    .description-container {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        font-size: 0.9rem;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        text-align: center;
+        pointer-events: none;
+    }
+
+    .image-link:hover .description-container {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    /* Text */
+    .title {
+
+    }
+</style>

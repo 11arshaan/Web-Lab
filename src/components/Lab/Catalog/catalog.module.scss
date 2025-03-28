@@ -3,7 +3,11 @@
     height: 100%;
     width: 80%;
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 70px;
     margin:  auto;
+
+    
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */

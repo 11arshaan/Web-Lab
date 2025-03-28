@@ -1,7 +1,11 @@
 ---
 import styles from "./catalog.module.scss";
+import { experiments } from "../../../data/experiments";
+import Item from "../Item/item.astro";
 ---
 
 <div class={styles["catalog-container"]}>
-
+    {experiments.map(item => (
+        <Item {...item} />
+    ))}
 </div>
