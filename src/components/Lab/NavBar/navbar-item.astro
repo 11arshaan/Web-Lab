@@ -1,0 +1,30 @@
+---
+// Props: label (string), href (string), active (boolean)
+const { label, active = false } = Astro.props;
+---
+
+<li class={`navbar-item${active ? ' active' : ''}`}>
+    <a aria-current={ active ? "page" : undefined }>
+        {label}
+    </a>
+</li>
+
+
+<style>
+    .navbar-item {
+        display: inline-block;
+        margin: 0 1rem;
+    }
+    .navbar-item a {
+        text-decoration: none;
+        color: inherit;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+    .navbar-item.active a,
+    .navbar-item a:hover {
+        background: #f0f0f0;
+        color: #0070f3;
+    }
+</style>

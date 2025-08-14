@@ -1,10 +1,10 @@
 .catalog-container {
     border: 1px solid white;
     height: 100%;
-    width: 80%;
+    width: 75%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 70px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    column-gap: clamp(10px, 1vw ,40px);
     margin:  auto;
 
     

@@ -1,0 +1,14 @@
+---
+import styles from "./navbar.module.scss";
+import { experiments } from "../../../data/experiments";
+import NavbarItem from "./navbar-item.astro";
+---
+
+<div class={styles["navbar-container"]}>
+    <ul class={styles["navbar-list"]}>
+        <NavbarItem
+            label={"Utility"}
+            active={true}
+        />
+    </ul>
+</div>
